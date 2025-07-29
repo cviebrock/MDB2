@@ -1,12 +1,12 @@
-Introduction
-============
+# Introduction
+
 PEAR MDB2 is a project to merge PEAR DB and Metabase into one DB
 abstraction layer.
 
 For mor information about these projects, see:
 
-  * [PEAR DB](https://pear.php.net/package/DB)
-  * [Metabase](http://phpclasses.upperdesign.com/browse.html/package/20/)
+- [PEAR DB](https://pear.php.net/package/DB)
+- [Metabase](http://phpclasses.upperdesign.com/browse.html/package/20/)
 
 At these URLs you will also find the licensing information on these two
 projects along with the credits.
@@ -25,38 +25,38 @@ development related questions of the MDB2 package itself. For questions
 using MDB2 pelase direct your questions to
 [pear-general@lists.php.net](mailto:pear-general@lists.php.net).
 
-Features
-========
+# Features
+
 MDB2 provides a common API for all support RDBMS. The main difference to most
 other DB abstraction packages is that MDB2 goes much further to ensure
 portability. Among other things MDB2 features:
 
- * An OO-style query API
- * A DSN (data source name) or array format for specifying database servers
- * Datatype abstraction and on demand datatype conversion
- * Portable error codes
- * Sequential and non sequential row fetching as well as bulk fetching
- * Ordered array and associative array for the fetched rows
- * Buffered and Unbuffered fetching
- * Prepare/execute (bind) emulation
- * Sequence emulation
- * Replace emulation
- * Limited Subselect emulation
- * Row limit support
- * Transactions support
- * Large Object support
- * Index/Unique support
- * Extension Framework to load advanced functionality on demand
- * Table information interface
- * RDBMS management methods (creating, dropping, altering)
- * RDBMS independent xml based schema definition management
- * Altering of a DB from a changed xml schema
- * Reverse engineering of xml schemas from an existing DB (currently MySQL and PgSQl)
- * Full integration into the PEAR Framework
- * PHPDoc API documentation
+- An OO-style query API
+- A DSN (data source name) or array format for specifying database servers
+- Datatype abstraction and on demand datatype conversion
+- Portable error codes
+- Sequential and non sequential row fetching as well as bulk fetching
+- Ordered array and associative array for the fetched rows
+- Buffered and Unbuffered fetching
+- Prepare/execute (bind) emulation
+- Sequence emulation
+- Replace emulation
+- Limited Subselect emulation
+- Row limit support
+- Transactions support
+- Large Object support
+- Index/Unique support
+- Extension Framework to load advanced functionality on demand
+- Table information interface
+- RDBMS management methods (creating, dropping, altering)
+- RDBMS independent xml based schema definition management
+- Altering of a DB from a changed xml schema
+- Reverse engineering of xml schemas from an existing DB (currently MySQL and PgSQl)
+- Full integration into the PEAR Framework
+- PHPDoc API documentation
 
-Getting Started
-===============
+# Getting Started
+
 I would first recommend taking a look at `docs/example.php`. This should give
 you a general feel of how to interact with MDB2.
 
@@ -65,8 +65,8 @@ After that you may want to
 you will also find a document describing the XML schema format and a little
 tutorial (it was just recently ported from Metabase, so it may contain errors).
 
-Package Content
-===============
+# Package Content
+
 As a user the only PHP script you will need to include is `MDB2.php` which will
 install to your PEAR root directory. All other files and their containing
 classes will be included via `MDB2::factory()`, `MDB2::connect()`, and
@@ -79,17 +79,17 @@ browser and command line interface. There are several other test that test the
 two wrappers. These files will install into your test dir found in the
 PEAR root dir.
 
-Documentation
-=============
- * [End-user documentation](http://pear.php.net/manual/en/package.database.mdb2.php)
- * [API documentation](https://pear.php.net/package/MDB2/docs/latest/)
+# Documentation
+
+- [End-user documentation](http://pear.php.net/manual/en/package.database.mdb2.php)
+- [API documentation](https://pear.php.net/package/MDB2/docs/latest/)
 
 The entire public API and most of the private methods (except for some of the
 large object classes) have been documented with PHPDoc comments. Most of the
 API is borrowed from ext-pdo, so you can look there for detailed documentation.
 
-Testing
-=======
+# Testing
+
 For most of the tests you can set the username/password/hostname in the
 relevant config file. The user will need to have the right to create new
 databases.
@@ -106,8 +106,8 @@ password = funky
 hostname = localhost
 ```
 
-How to Write New Drivers
-========================
+# How to Write New Drivers
+
 Skeleton drivers are provided in the docs directory of the MDB2 package.
 
 The best course of action would be to take a MDB2 driver and hack it to fit
@@ -117,10 +117,10 @@ working with the existing Metabase driver for inspiration that RDBMS when
 doing those changes.
 
 In order to check compliance of the driver with MDB2 you can use the testing
-suite (see the *testing* section above)
+suite (see the _testing_ section above)
 
-History
-=======
+# History
+
 MDB was started after Manuel broad be into the discussion about getting the
 features of Metabase into PEAR that was going on (again) in December 2001. He
 suggested that I could take on this project. After alot of discussion about
@@ -148,8 +148,8 @@ features have been removed. Some features where moved out of the core into
 separate loadable modules. Instead of resources resultsets are now wrapped
 into objects similar to PEAR DB.
 
-Credits
-=======
+# Credits
+
 I would especially like to thank Manuel Lemos (Author of Metabase) for
 getting me involved in this and generally being around to ask questions.
 I would also like to thank Tomas Cox and Stig S. Bakken from the PEAR
@@ -163,6 +163,6 @@ making MDB use PEAR Error and working on the XML schema manager.
 Finally Peter Bowyer for starting the discussion that made people pick
 up this project again after the first versions of what was then called
 "metapear" have been ideling without much feedback. I guess I should
-also thank BackendMedia (my company :-)  ) for providing the necessary means
+also thank BackendMedia (my company :-) ) for providing the necessary means
 to develop this on company time (actually for the most part my entire
 life is company time ... so it goes)
