@@ -28,7 +28,10 @@
   "autoload": {
     "psr-0": {
       "MDB2": ""
-    }
+    },
+    "files": [
+      "MDB2.php"
+    ]
   },
   "require": {
     "php": ">=8.2",
