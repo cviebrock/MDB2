@@ -3,7 +3,7 @@ includes:
 
 parameters:
   phpVersion: 80200
-  level: 0
+  level: 1
   paths:
     - MDB2.php
     - MDB2
