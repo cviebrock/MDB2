@@ -2,18 +2,16 @@
 
 # dependencies
 vendor/
-node_modules/
 
 # misc
 .DS_Store
 .env
 /.idea
-/.php-cs-fixer.cache
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
+.php-cs-fixer.cache
 *.swp
 
 # dependency lock file
 composer.lock
-yarn.lock
+
+# overrides for local tooling
+/phpstan.neon

@@ -1403,12 +1403,12 @@ class MDB2_Driver_Common implements Stringable
         switch ($type) {
             // expand to include all possible options
             case 'string':
-                $dsn = $dsn['phptype'] .
-                    ($dsn['dbsyntax'] ? ('(' . $dsn['dbsyntax'] . ')') : '') .
-                    '://' . $dsn['username'] . ':' .
-                     $dsn['password'] . '@' . $dsn['hostspec'] .
-                     ($dsn['port'] ? (':' . $dsn['port']) : '') .
-                     '/' . $dsn['database'];
+                $dsn = $dsn['phptype']
+                    . ($dsn['dbsyntax'] ? ('(' . $dsn['dbsyntax'] . ')') : '')
+                    . '://' . $dsn['username'] . ':'
+                    . $dsn['password'] . '@' . $dsn['hostspec']
+                    . ($dsn['port'] ? (':' . $dsn['port']) : '')
+                    . '/' . $dsn['database'];
                 break;
 
             case 'array':

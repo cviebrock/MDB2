@@ -1,0 +1,15 @@
+includes:
+  - phpstan-baseline.neon
+
+parameters:
+  phpVersion: 80200
+  level: 1
+  paths:
+    - MDB2.php
+    - MDB2
+  fileExtensions:
+    - php
+    - inc
+  editorUrl: '%%file%%:%%line%%'
+  editorUrlTitle: '%%file%%:%%line%%'
+  errorFormat: table

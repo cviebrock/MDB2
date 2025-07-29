@@ -547,8 +547,9 @@ class MDB2_Driver_Datatype_Common extends MDB2_Module_Common
      */
     protected function getDeclarationOptions($field)
     {
-        $charset = empty($field['charset']) ? '' :
-            ' ' . $this->getCharsetFieldDeclaration($field['charset']);
+        $charset = empty($field['charset'])
+            ? ''
+            : ' ' . $this->getCharsetFieldDeclaration($field['charset']);
 
         $notnull = empty($field['notnull']) ? '' : ' NOT NULL';
         $default = '';
@@ -569,8 +570,9 @@ class MDB2_Driver_Datatype_Common extends MDB2_Module_Common
             }
         }
 
-        $collation = empty($field['collation']) ? '' :
-            ' ' . $this->getCollationFieldDeclaration($field['collation']);
+        $collation = empty($field['collation'])
+            ? ''
+            : ' ' . $this->getCollationFieldDeclaration($field['collation']);
 
         return $charset . $default . $notnull . $collation;
     }
@@ -930,10 +932,12 @@ class MDB2_Driver_Datatype_Common extends MDB2_Module_Common
             $change['notnull'] = true;
         }
 
-        $previous_default = array_key_exists('default', $previous) ? $previous['default'] :
-            ($previous_notnull ? '' : null);
-        $default = array_key_exists('default', $current) ? $current['default'] :
-            ($notnull ? '' : null);
+        $previous_default = array_key_exists('default', $previous)
+            ? $previous['default']
+            : ($previous_notnull ? '' : null);
+        $default = array_key_exists('default', $current)
+            ? $current['default']
+            : ($notnull ? '' : null);
         if ($previous_default !== $default) {
             $change['default'] = true;
         }
