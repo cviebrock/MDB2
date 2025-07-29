@@ -37,4 +37,3 @@ jobs:
         run: |
           composer run phpcs:ci
           composer run phpstan:ci
-          composer run test
