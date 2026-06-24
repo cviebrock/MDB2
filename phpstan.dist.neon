@@ -7,8 +7,8 @@ parameters:
   fileExtensions:
     - php
     - inc
-  editorUrl: '%%file%%:%%line%%'
-  editorUrlTitle: '%%file%%:%%line%%'
+  editorUrl: '%%relFile%%:%%line%%'
+  editorUrlTitle: '%%relFile%%:%%line%%'
   errorFormat: table
 
 # Checks from higher levels that we want to include here
